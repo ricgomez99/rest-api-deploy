@@ -1,6 +1,5 @@
 const express = require("express");
 const app = express();
-const PORT = process.env.PORT ?? 8000;
 const movies = require("./movies.json");
 const crypto = require("node:crypto");
 const cors = require("cors");
@@ -113,6 +112,8 @@ app.patch("/movies/:id", (req, res) => {
 
   return res.json(updatedMovie);
 });
+
+const PORT = process.env.PORT ?? 8000;
 
 app.listen(PORT, () => {
   console.log(`app listening on port: http://localhost:${PORT}`);
