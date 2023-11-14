@@ -113,7 +113,7 @@ app.patch("/movies/:id", (req, res) => {
   return res.json(updatedMovie);
 });
 
-const PORT = process.env.PORT ?? 8000;
+const PORT = process.env.PORT ?? 8080;
 
 app.listen(PORT, () => {
   console.log(`app listening on port: http://localhost:${PORT}`);
